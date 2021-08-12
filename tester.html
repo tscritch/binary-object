@@ -1,0 +1,37 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tester</title>
+</head>
+<body>
+  <h1>Test</h1>
+  <button id="bincode">Bincode</button>
+  <button id="json">JSON</button>
+  <br/>
+  <button id="bincodex1000">Bincode x1000</button>
+  <button id="jsonx1000">JSON x1000</button>
+
+  <script>
+    const bincodeButton = document.getElementById("bincode")
+    const jsonButton = document.getElementById("json")
+
+    bincodeButton.addEventListener('click', () => {
+      fetch('/bincode_request')
+    })
+    jsonButton.addEventListener('click', () => {
+      fetch('/json_request')
+    })
+
+    const bincodeButtonx1000 = document.getElementById("bincodex1000")
+    const jsonButtonx1000 = document.getElementById("jsonx1000")
+
+    bincodeButtonx1000.addEventListener('click', () => {
+      fetch('/bincode_movies')
+    })
+    jsonButtonx1000.addEventListener('click', () => {
+      fetch('/json_movies')
+    })
+  </script>
+</body>
+</html>
